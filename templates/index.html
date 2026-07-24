@@ -1,0 +1,217 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>🛡️AI-Powered Phishing Website Detection System
+
+        </h1>
+
+        <p>
+            An intelligent cybersecurity solution that detects phishing websites
+            using a Random Forest Machine Learning model with SHAP and LIME
+            Explainable AI for transparent and reliable predictions.
+        </p>
+
+        <a href="/upload" class="btn">
+            Upload CSV →
+        </a>
+    </div>
+
+</section>
+
+<section class="cards">
+
+    <div class="card">
+
+        <h2>🤖 Machine Learning</h2>
+        <p>
+            Random Forest model trained to detect phishing websites with 96.02% accuracy.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>📂 Batch Prediction</h2>
+        <p>
+            Upload CSV files containing website features and receive phishing predictions.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>⚡ Fast Prediction</h2>
+
+        <p>
+            Upload website feature datasets and detect phishing instantly.
+        </p>
+
+    </div>
+
+</section>
+
+<hr>
+
+<h2 style="text-align:center; margin-top:50px;">
+📈 Project Statistics
+</h2>
+
+<div class="stats-container">
+
+    <div class="stat-card">
+        <h3>Dataset Size</h3>
+        <h2>11,430</h2>
+        <p>Websites</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Features</h3>
+        <h2>87</h2>
+        <p>Engineered Features</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Accuracy</h3>
+        <h2>96.02%</h2>
+        <p>Random Forest</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Explainability</h3>
+        <h2>SHAP + LIME</h2>
+        <p>Transparent AI</p>
+    </div>
+
+</div>
+
+<hr>
+
+<h2 style="text-align:center; margin-top:50px;">
+⚙️ Machine Learning Workflow
+</h2>
+
+<div class="card">
+
+<ol style="line-height:2;">
+
+<li>Upload website feature dataset.</li>
+
+<li>Preprocess the uploaded dataset.</li>
+
+<li>Scale numerical features using StandardScaler.</li>
+
+<li>Predict using the trained Random Forest model.</li>
+
+<li>Generate confidence scores.</li>
+
+<li>Display phishing detection results.</li>
+
+<li>Download prediction report.</li>
+
+<li>Interpret predictions using SHAP and LIME.</li>
+
+</ol>
+
+</div>
+
+<hr>
+
+<h2 style="text-align:center; margin-top:50px;">
+🛠 Technology Stack
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Frontend</h3>
+
+<p>
+
+HTML<br>
+CSS<br>
+Bootstrap
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Backend</h3>
+
+<p>
+
+Python<br>
+Flask
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Machine Learning</h3>
+
+<p>
+
+Scikit-learn<br>
+Random Forest
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Explainable AI</h3>
+
+<p>
+
+SHAP<br>
+LIME
+
+</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div style="text-align:center; margin:60px 0;">
+
+<h2>
+
+Ready to Analyze Website Data?
+
+</h2>
+
+<p>
+
+Upload your CSV dataset and let AI detect phishing websites.
+
+</p>
+
+<br>
+
+<a href="/upload">
+
+<button>
+
+📂 Upload Dataset
+
+</button>
+
+</a>
+
+</div>
+
+{% endblock %}

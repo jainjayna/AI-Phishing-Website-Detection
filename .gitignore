@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environment
+venv/
+
+# VS Code
+.vscode/
+
+# Logs
+logs/*.log
+
+# Reports
+reports/*.pdf
+reports/*.png
+reports/*.csv
+
+# Models (optional if models are large)
+*.pkl
+
+# OS files
+.DS_Store
+Thumbs.db

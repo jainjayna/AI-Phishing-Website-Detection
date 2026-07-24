@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>{% block title %}{% endblock %} | AI Phishing Detection System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="/"
+class="{% if request.path=='/' %}active{% endif %}">
+Home
+</a>
+
+<a href="/about"
+class="{% if request.path=='/about' %}active{% endif %}">
+About
+</a>
+
+<a href="/upload"
+class="{% if request.path=='/upload' %}active{% endif %}">
+Upload CSV
+</a>
+
+<a href="/explain"
+class="{% if request.path=='/explain' %}active{% endif %}">
+Explainability
+</a>
+
+<a href="/reports"
+class="{% if request.path=='/reports' %}active{% endif %}">
+Reports
+</a>
+
+</nav>
+
+<div class="container">
+
+{% block content %}
+
+{% endblock %}
+
+</div>
+
+<footer>
+
+    © 2026 AI Powered Phishing Website Detection
+
+</footer>
+
+<footer style="
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+    background:#111827;
+    border-top:1px solid #2d3748;
+    color:white;
+">
+
+<h4>🛡️ AI-Powered Phishing Website Detection System</h4>
+
+<p>
+Built with ❤️ using Flask, Python, Random Forest, SHAP, LIME and Scikit-learn.
+</p>
+
+<small>
+© 2026 All Rights Reserved
+</small>
+
+</footer>
+
+<script>
+
+document.querySelectorAll("form").forEach(form=>{
+
+form.addEventListener("submit",function(){
+
+document.getElementById("loader").style.display="flex";
+
+});
+
+});
+
+</script>
+
+</body>
+
+<div id="loader">
+
+<div class="loader-box">
+
+<div class="spinner"></div>
+
+<p>
+
+Running AI Prediction...
+
+</p>
+
+</div>
+
+</div>
+
+</html>

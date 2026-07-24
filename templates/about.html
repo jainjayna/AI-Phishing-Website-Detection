@@ -1,0 +1,256 @@
+{% extends "base.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+
+<h1>ℹ️ About AI-Powered Phishing Website Detection System</h1>
+
+<p>
+The <b>AI-Powered Phishing Website Detection System</b> is a Machine Learning-based
+cybersecurity application developed to identify phishing websites using engineered
+website features. The system classifies websites as <b>Legitimate</b> or
+<b>Phishing</b> and provides Explainable AI visualizations using SHAP and LIME
+to improve transparency and trust in model predictions.
+</p>
+
+<hr>
+
+<!-- ================= Project Objective ================= -->
+
+<div class="card">
+
+<h2>🎯 Project Objective</h2>
+
+<p style="line-height:1.8;">
+
+The primary objective of this project is to develop an intelligent phishing
+website detection system capable of accurately identifying malicious websites
+using Machine Learning. The application also aims to make predictions more
+transparent by integrating Explainable AI techniques, enabling users to
+understand how the model arrives at its decisions.
+
+</p>
+
+</div>
+
+<br>
+
+<!-- ================= Technologies Used ================= -->
+
+<div class="card">
+
+<h2>🛠️ Technologies Used</h2>
+
+<table class="table table-striped">
+
+<tr>
+<th>Technology</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>Python</td>
+<td>Programming Language</td>
+</tr>
+
+<tr>
+<td>Flask</td>
+<td>Web Application Framework</td>
+</tr>
+
+<tr>
+<td>Pandas</td>
+<td>Data Processing</td>
+</tr>
+
+<tr>
+<td>Scikit-learn</td>
+<td>Machine Learning Model</td>
+</tr>
+
+<tr>
+<td>Random Forest</td>
+<td>Classification Algorithm</td>
+</tr>
+
+<tr>
+<td>SHAP</td>
+<td>Global Explainability</td>
+</tr>
+
+<tr>
+<td>LIME</td>
+<td>Local Explainability</td>
+</tr>
+
+<tr>
+<td>HTML, CSS, Bootstrap</td>
+<td>Frontend Design</td>
+</tr>
+
+</table>
+
+</div>
+
+<br>
+
+<!-- ================= Machine Learning Workflow ================= -->
+
+<div class="card">
+
+<h2>⚙️ Machine Learning Workflow</h2>
+
+<ol style="line-height:2;">
+
+<li>Collect website phishing dataset.</li>
+
+<li>Perform data cleaning and preprocessing.</li>
+
+<li>Encode the target labels.</li>
+
+<li>Split the dataset into training and testing sets.</li>
+
+<li>Scale numerical features using StandardScaler.</li>
+
+<li>Train the Random Forest Classifier.</li>
+
+<li>Evaluate model performance using Accuracy, Precision, Recall and F1-Score.</li>
+
+<li>Generate Explainable AI visualizations using SHAP and LIME.</li>
+
+<li>Deploy the trained model using Flask.</li>
+
+</ol>
+
+</div>
+
+<br>
+
+<!-- ================= Dataset Overview ================= -->
+
+<div class="card">
+
+<h2>📂 Dataset Overview</h2>
+
+<table class="table table-striped">
+
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+
+<tr>
+<td>Total Samples</td>
+<td>11,430 Websites</td>
+</tr>
+
+<tr>
+<td>Total Features</td>
+<td>87 Engineered Features</td>
+</tr>
+
+<tr>
+<td>Target Classes</td>
+<td>Legitimate & Phishing</td>
+</tr>
+
+<tr>
+<td>Training Samples</td>
+<td>9,144</td>
+</tr>
+
+<tr>
+<td>Testing Samples</td>
+<td>2,286</td>
+</tr>
+
+<tr>
+<td>Class Distribution</td>
+<td>Balanced Dataset (50% Legitimate, 50% Phishing)</td>
+</tr>
+
+</table>
+
+</div>
+
+<br>
+
+<!-- ================= Model Details ================= -->
+
+<div class="card">
+
+<h2>🤖 Model Details</h2>
+
+<table class="table table-striped">
+
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+
+<tr>
+<td>Algorithm</td>
+<td>Random Forest Classifier</td>
+</tr>
+
+<tr>
+<td>Accuracy</td>
+<td>96.02%</td>
+</tr>
+
+<tr>
+<td>Precision</td>
+<td>96%</td>
+</tr>
+
+<tr>
+<td>Recall</td>
+<td>96%</td>
+</tr>
+
+<tr>
+<td>F1 Score</td>
+<td>96%</td>
+</tr>
+
+<tr>
+<td>Explainability</td>
+<td>SHAP + LIME</td>
+</tr>
+
+</table>
+
+</div>
+
+<br>
+
+<!-- ================= Key Features ================= -->
+
+<div class="card">
+
+<h2>⭐ Key Features</h2>
+
+<ul style="line-height:2;">
+
+<li>✔ Batch prediction using CSV upload</li>
+
+<li>✔ Random Forest Machine Learning model</li>
+
+<li>✔ Confidence score for every prediction</li>
+
+<li>✔ Download prediction results as CSV</li>
+
+<li>✔ Interactive SHAP Explainability</li>
+
+<li>✔ LIME Local Interpretability</li>
+
+<li>✔ Feature Importance Visualization</li>
+
+<li>✔ Responsive Flask Web Application</li>
+
+</ul>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block title %}Model Reports{% endblock %}
+
+{% block content %}
+
+<h1>📊 AI Model Performance Dashboard</h1>
+
+<p>
+This page summarizes the overall performance of the Random Forest model used
+for phishing website detection.
+</p>
+
+<br>
+
+<div class="stats-container">
+
+    <div class="stat-card">
+        <h3>Algorithm</h3>
+        <h2>Random Forest</h2>
+    </div>
+
+    <div class="stat-card">
+        <h3>Accuracy</h3>
+        <h2 style="color:#28a745;">96.02%</h2>
+    </div>
+
+    <div class="stat-card">
+        <h3>Dataset Size</h3>
+        <h2>11,430</h2>
+    </div>
+
+    <div class="stat-card">
+        <h3>Features</h3>
+        <h2>87</h2>
+    </div>
+
+</div>
+
+<hr>
+
+<h2>Classification Report</h2>
+
+<table class="table table-striped table-hover">
+
+<thead>
+
+<tr>
+
+<th>Metric</th>
+
+<th>Legitimate</th>
+
+<th>Phishing</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Precision</td>
+
+<td>0.96</td>
+
+<td>0.96</td>
+
+</tr>
+
+<tr>
+
+<td>Recall</td>
+
+<td>0.96</td>
+
+<td>0.96</td>
+
+</tr>
+
+<tr>
+
+<td>F1 Score</td>
+
+<td>0.96</td>
+
+<td>0.96</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<hr>
+
+<h2>Confusion Matrix</h2>
+
+<div style="text-align:center;">
+
+<img
+src="{{ url_for('static', filename='images/confusion_matrix.png') }}"
+style="width:80%;max-width:700px;border-radius:10px;">
+
+</div>
+
+<hr>
+
+<h2>ROC Curve</h2>
+
+<div style="text-align:center;">
+
+<img
+src="{{ url_for('static', filename='images/roc_curve.png') }}"
+style="width:80%;max-width:700px;border-radius:10px;">
+
+</div>
+
+<hr>
+
+<div class="card">
+
+<h2>Performance Summary</h2>
+
+<ul style="line-height:2;text-align:left;">
+
+<li>The Random Forest classifier achieved an overall accuracy of <b>96.02%</b>.</li>
+
+<li>Both phishing and legitimate websites were classified with high precision and recall.</li>
+
+<li>The confusion matrix shows that only a small number of websites were misclassified.</li>
+
+<li>The ROC curve demonstrates excellent class separation, indicating strong predictive capability.</li>
+
+<li>The model is suitable for real-time phishing website detection tasks.</li>
+
+</ul>
+
+</div>
+
+{% endblock %}

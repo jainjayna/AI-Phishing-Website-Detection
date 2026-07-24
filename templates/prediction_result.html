@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Prediction Results{% endblock %}
+
+{% block content %}
+
+<h1>Prediction Results</h1>
+
+<div class="stats-container">
+
+    <div class="stat-card">
+        <h3>Total Websites</h3>
+        <h2>{{ total }}</h2>
+    </div>
+
+    <div class="stat-card">
+        <h3>Legitimate</h3>
+        <h2 style="color:#28a745;">{{ legitimate }}</h2>
+    </div>
+
+    <div class="stat-card">
+        <h3>Phishing</h3>
+        <h2 style="color:#dc3545;">{{ phishing }}</h2>
+    </div>
+
+    <div class="stat-card">
+        <h3>Average Confidence</h3>
+        <h2>{{ average_confidence }}%</h2>
+    </div>
+
+</div>
+
+<br>
+
+<div style="text-align:center; margin:30px 0;">
+
+    <h2>Prediction Summary</h2>
+
+    <img
+        src="{{ url_for('static', filename='images/prediction_summary.png') }}"
+        width="420"
+        alt="Prediction Summary">
+
+</div>
+
+{% for table in tables %}
+    {{ table|safe }}
+{% endfor %}
+
+<br><br>
+
+<div style="text-align:center;">
+
+    <a href="/upload">
+        <button>Upload Another CSV</button>
+    </a>
+
+    <br><br>
+    <a href="/download">
+        <button>⬇ Download Results CSV</button>
+    </a>
+
+</div>
+
+{% endblock %}

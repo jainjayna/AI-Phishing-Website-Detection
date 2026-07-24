@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}Model Explainability{% endblock %}
+
+{% block content %}
+
+<h1>🧠 Explainable AI Dashboard</h1>
+
+<p>
+Explore how the Random Forest model identifies phishing websites using
+three Explainable AI (XAI) techniques: <b>SHAP</b>, <b>LIME</b>, and
+<b>Feature Importance</b>. These visualizations help interpret the model's
+decision-making process and highlight the factors that most influence
+predictions.
+</p>
+
+<!-- ================= SHAP ================= -->
+
+<hr>
+
+<h2>SHAP Summary Plot</h2>
+
+<p>
+The SHAP Summary Plot shows the overall impact of each feature on the
+model's predictions across the dataset. Features at the top contribute
+more significantly to phishing detection than those at the bottom.
+</p>
+
+<div style="text-align:center; margin-top:30px;">
+
+    <img
+        src="{{ url_for('static', filename='images/shap_summary.png') }}"
+        alt="SHAP Summary Plot"
+        style="width:90%; max-width:1000px; border-radius:10px;">
+
+</div>
+
+<br>
+
+<div class="card">
+
+<h2>How to Read the SHAP Plot</h2>
+
+<ul style="line-height:2; text-align:left;">
+
+<li><b>Top features</b> have the greatest influence on the model.</li>
+
+<li><b>Red points</b> represent higher feature values.</li>
+
+<li><b>Blue points</b> represent lower feature values.</li>
+
+<li><b>Points on the right</b> increase the probability of a phishing website.</li>
+
+<li><b>Points on the left</b> increase the probability of a legitimate website.</li>
+
+</ul>
+
+</div>
+
+<!-- ================= LIME ================= -->
+
+<hr>
+
+<h2>LIME Explanation</h2>
+
+<p>
+LIME (Local Interpretable Model-Agnostic Explanations) explains why the
+model made a prediction for a single website by highlighting the features
+that contributed positively or negatively to that prediction.
+</p>
+
+<div style="text-align:center; margin-top:30px;">
+
+    <img
+        src="{{ url_for('static', filename='images/lime_explanation.png') }}"
+        alt="LIME Explanation"
+        style="width:90%; max-width:900px; border-radius:10px;">
+
+</div>
+
+<!-- ================= Feature Importance ================= -->
+
+<hr>
+
+<h2>Feature Importance</h2>
+
+<p>
+The Random Forest model ranks features according to how much they
+contribute to phishing website detection. Higher importance indicates a
+greater influence on the model's decisions.
+</p>
+
+<div style="text-align:center; margin-top:30px;">
+
+    <img
+        src="{{ url_for('static', filename='images/feature_importance.png') }}"
+        alt="Feature Importance"
+        style="width:90%; max-width:900px; border-radius:10px;">
+
+</div>
+
+<!-- ================= Key Insights ================= -->
+
+<hr>
+
+<div class="card">
+
+<h2>Key Insights</h2>
+
+<ul style="line-height:2; text-align:left;">
+
+<li><b>Google Index</b> is the most influential feature for identifying legitimate and phishing websites.</li>
+
+<li><b>Page Rank</b> is the second most important feature, indicating that trusted websites generally have higher rankings.</li>
+
+<li><b>Hyperlink-related features</b> such as <b>Number of Hyperlinks</b>, <b>External Hyperlinks</b>, and<b>Safe Anchor</b> play a major role in phishing detection.</li>
+
+<li><b>Domain Age</b> helps distinguish newly created phishing domains from long-established legitimate websites.</li>
+
+<li>The Random Forest model achieved an overall <b>Accuracy of 96.02%</b>, demonstrating strong predictive performance.</li>
+
+<li>SHAP provides a <b>global explanation</b> of feature importance, while LIME explains <b>individual predictions</b>, making the model more transparent and trustworthy.</li>
+
+</ul>
+
+</div>
+
+{% endblock %}

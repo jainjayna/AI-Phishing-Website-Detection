@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Result{% endblock %}
+
+{% block content %}
+
+<div class="result-wrapper">
+
+    <div class="result-card">
+
+        <div class="result-icon">
+            🛡️
+        </div>
+
+        <h1>Prediction Result</h1>
+
+        <div class="url-box">
+            <strong>Website:</strong>
+            <br>
+            {{ url }}
+        </div>
+
+        <div class="prediction legitimate">
+            {{ prediction }}
+        </div>
+
+        <div class="confidence-box">
+
+            <h3>Confidence Score</h3>
+
+            <div class="progress-bar">
+                <div class="progress-fill"
+                     style="width: {{ confidence }}%;">
+                </div>
+            </div>
+
+            <p class="confidence-text">
+                {{ confidence }}%
+            </p>
+
+        </div>
+
+        <div class="action-buttons">
+
+            <a href="/explain" class="btn-secondary">
+                📈 SHAP Explanation
+            </a>
+
+            <a href="/predict" class="btn-secondary">
+                🔁 Check Another Website
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
