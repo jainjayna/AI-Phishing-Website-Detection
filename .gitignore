@@ -1,25 +1,45 @@
-# Python
+# Python cache
 __pycache__/
 *.py[cod]
 *.pyo
+*.pyd
 
-# Virtual Environment
+# Virtual Environments
 venv/
+env/
+ENV/
+.venv/
+phishing_env/
 
-# VS Code
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# VS Code & PyCharm
 .vscode/
-
-# Logs
-logs/*.log
-
-# Reports
-reports/*.pdf
-reports/*.png
-reports/*.csv
-
-# Models (optional if models are large)
-*.pkl
+.idea/
 
 # OS files
 .DS_Store
 Thumbs.db
+
+# Logs
+*.log
+
+# Generated Reports
+reports/*.pdf
+reports/*.png
+reports/*.csv
+
+# Generated Charts
+static/images/prediction_summary.png
+
+# Environment files
+.env
+
+# Python build files
+build/
+dist/
+*.egg-info/
+
+# Temporary files
+tempCodeRunnerFile.py
