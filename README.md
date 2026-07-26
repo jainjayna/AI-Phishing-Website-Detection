@@ -35,7 +35,7 @@ A Flask-based Machine Learning web application that detects phishing websites us
 - Model Performance
 - Explainable AI
 - Important Features
-- Screenshots
+- Application Screenshot
 - Installation
 - Project Structure
 - Future Improvements
@@ -108,7 +108,7 @@ The application provides an intuitive web interface for uploading datasets, view
 
 # 🧠 Machine Learning Workflow
 
-```
+```text
 Dataset
       │
       ▼
@@ -155,7 +155,7 @@ The model is trained on a phishing website dataset containing engineered website
 - HTML Features
 - Domain Properties
 
-Target Classes
+### Target Classes
 
 - Legitimate Website
 - Phishing Website
@@ -207,41 +207,21 @@ This project incorporates Explainable Artificial Intelligence (XAI) techniques t
 
 ---
 
-# 📸 Application Screenshots
+# 📸 Application Screenshot
 
 ## 🏠 Home Page
 
-> Add screenshot
+<p align="center">
+    <img src="./static/images/home_page.png" alt="Home Page" width="900">
+</p>
 
----
-
-## 📂 Upload Dataset
-
-> Add screenshot
-
----
-
-## 📊 Prediction Dashboard
-
-> Add screenshot
-
----
-
-## 🧠 Explainability
-
-> Add screenshot
-
----
-
-## 📈 Reports
-
-> Add screenshot
+The Home Page serves as the landing page of the AI-Powered Phishing Website Detection System. It provides users with a clean and modern interface, introduces the project, and allows easy navigation to the prediction, explainability, reports, and about pages.
 
 ---
 
 # 📂 Project Structure
 
-```
+```text
 AI-Phishing-Website-Detection
 │
 ├── app.py
@@ -262,6 +242,7 @@ AI-Phishing-Website-Detection
 ├── static/
 │   ├── css/
 │   └── images/
+│       └── home_page.png
 │
 └── templates/
 ```
@@ -308,7 +289,7 @@ python app.py
 
 Open your browser
 
-```
+```text
 http://127.0.0.1:5000
 ```
 
@@ -333,7 +314,7 @@ http://127.0.0.1:5000
 
 Commerce Student | Data Science & AI Enthusiast
 
-GitHub:
+**GitHub:**  
 https://github.com/jainjayna
 
 ---
